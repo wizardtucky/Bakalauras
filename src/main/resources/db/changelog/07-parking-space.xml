@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+  <changeSet id="07" author="robertas">
+    <createTable tableName="parking_space">
+      <column  name="id"  type="bigint" autoIncrement="true">
+        <constraints primaryKey="true"/>
+      </column>
+      <column  name="user_id"  type="bigint" autoIncrement="false">
+      </column>
+      <column  name="user_who_reserved"  type="bigint" autoIncrement="true">
+      </column>
+      <column  name="paid_spot"  type="boolean"/>
+      <column  name="disabled_spot"  type="boolean"/>
+      <column  name="small_car_spot"  type="boolean"/>
+      <column name="address" type="varchar(255)"/>
+      <column name="latitude" type="double"/>
+      <column name="longitude" type="double"/>
+      <column  name="creation_time" type="datetime"/>
+    </createTable>
+  </changeSet>
+</databaseChangeLog>

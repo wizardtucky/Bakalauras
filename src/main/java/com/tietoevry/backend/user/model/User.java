@@ -30,6 +30,4 @@ public class User {
     private String lastName;
     @ManyToMany
     private List<Role> role;
-    @OneToMany
-    private List<Account> accounts;
 }
